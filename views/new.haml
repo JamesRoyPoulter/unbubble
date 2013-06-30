@@ -1,0 +1,23 @@
+Create a new post
+
+#form
+  %form{action:"/create", method: "post"}
+    %input{type: "text", name:"title"}
+    %p
+      %textarea{type: "text", name:"content"}
+    %p
+      %input{type: "text", name:"creation_date"}
+    %p
+      %button publish post
+
+/ <form action='/create' method='post'>
+/   <dl>
+/     <dt><label for='item'>Item :</label></dt>
+/     <dd><input id='item' type='text' name='item' autofocus></dd>
+/   <dl>
+/   </dl>
+/     <dt><label for='details'>Details :</label></dt>
+/     <dd><textarea id='details' name='details'></textarea></dd>
+/   </dl>
+/   <button>Add Task</button>
+/ </form>

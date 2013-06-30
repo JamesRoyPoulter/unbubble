@@ -1,0 +1,17 @@
+%h2
+  = @title["title"]
+%p
+  Date:
+  = @title["creation_date"]
+%p
+  = @title["content"]
+
+#form
+  %form{action:"/posts/#{@title["id"]}", method: "post"}
+    %input{type: "text", name:"title", value: "#{@title["title"]}"}
+    %p
+      %input{type: "text", name:"name", value: "#{@title["content"]}"}
+    %p
+      %input{type: "text", name:"name", value: "#{@title["creation_date"]}"}
+    %p
+      %button confirm changes

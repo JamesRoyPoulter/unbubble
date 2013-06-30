@@ -11,6 +11,19 @@
 
 
 
+to do:
+
+create posts
+delete posts
+admin access with sessions
+can only be created edited or deleted in admin part
+
+
+
+
+
+
+
 get '/admin' do
   unless session[:admin] == true
     redirect "/"

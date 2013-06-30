@@ -2,7 +2,9 @@
 %html
   %head
     %h1
-      unbubble.me
+      %a{:href => '/'} unbubble.me
     %body
       #container
         = yield
+      / #container
+      /   = yield

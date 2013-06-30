@@ -1,6 +1,10 @@
+%a{:href => '/new'} Create new post
 %ul
-  - @friends.each do |friend|
+  - @posts.each do |post|
     %li
-      %a{href:"/mate/#{friend["id"]}"}
-        = friend["name"]
-        = friend["birthday"]
+      %a{href:"/posts/#{post["id"]}"}
+        %p
+        = post["title"]
+    %li
+      %p
+      = post["content"]
