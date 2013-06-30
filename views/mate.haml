@@ -1,0 +1,12 @@
+%h2
+  = @mate["name"]
+%p
+  Date:
+  = @mate["birthday"]
+%p
+  = @mate["status"]
+
+#form
+  %form{action:"/mate/#{@mate["id"]}", method: "post"}
+    %input{type: "text",name:"name",value: "#{@mate["name"]}"}
+    %button

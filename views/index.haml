@@ -1,0 +1,6 @@
+%ul
+  - @friends.each do |friend|
+    %li
+      %a{href:"/mate/#{friend["id"]}"}
+        = friend["name"]
+        = friend["birthday"]

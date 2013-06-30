@@ -1,0 +1,25 @@
+# blog
+
+* Write an CRUD interface (list posts, create posts, show post, edit post, delete post)
+
+* Use sinatra, haml, twitter bootstrap
+
+* the blog should have an admin access (sessions)
+
+* the posts can only be created, edited and deleted in the admin part of the blocks
+
+
+
+
+get '/admin' do
+  unless session[:admin] == true
+    redirect "/"
+end
+
+
+
+get '/admin_connect' do
+  if params["login"]== "geraud" and params["password"]=="wdi"
+    session[:admin] = true
+    redirect "/admin" #page not created yet...
+end
