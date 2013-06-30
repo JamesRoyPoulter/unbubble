@@ -26,9 +26,8 @@ end
 
 get '/admin_page' do
   if session[:admin] == true
+    @posts = @db.exec "SELECT * FROM unbubble"
     haml :admin_page
-    # @posts = @db.exec "SELECT * FROM unbubble"
-    # haml :index
   else
     redirect "/"
   end
