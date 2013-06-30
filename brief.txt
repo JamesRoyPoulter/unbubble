@@ -13,7 +13,7 @@
 
 to do:
 
-create posts
+
 delete posts
 admin access with sessions
 can only be created edited or deleted in admin part

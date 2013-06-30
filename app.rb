@@ -32,10 +32,10 @@ end
 # Create - create new blog and send to database
 post '/create' do
   title = params[:title]
-  content = params[:details]
+  content = params[:content]
   creation_date = params[:creation_date]
   sql = "insert into unbubble (title, content, creation_date) values ('#{title}', '#{content}', '#{creation_date}')"
-  run_sql(sql)
+  @db.exec(sql)
   redirect to('/')
 end
 
@@ -50,7 +50,15 @@ end
 
 # Update - when submit form this updates the blog post
 post "/posts/:id" do
-  sql = "UPDATE unbubble SET title='#{params[:title]}' WHERE id=#{params[:id]}"
+  sql = "UPDATE unbubble SET title='#{params[:title]}', content='#{params[:content]}', creation_date='#{params[:creation_date]}' WHERE id=#{params[:id]}"
   @db.exec(sql)
   redirect "/posts/#{params[:id]}"
+end
+
+
+# Delete - delete a post
+get '/delete/:id' do
+  sql = "delete from unbubble where id = #{params[:id]}"
+  @db.exec(sql)
+  redirect to('/')
 end
