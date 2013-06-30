@@ -1,0 +1,13 @@
+Login please!
+
+%p
+
+#form
+  %form{action:"/admin_redirect", method: "post"}
+    User:
+    %input{type: "text", name:"login"}
+    %p
+      Pass:
+      %input{type: "text", name:"password"}
+    %p
+      %button Login

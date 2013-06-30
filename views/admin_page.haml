@@ -1,0 +1,10 @@
+%a{:href => '/new'} Create new post
+%ul
+  - @posts.each do |post|
+    %li
+      %a{href:"/posts/#{post["id"]}"}
+        %p
+        = post["title"]
+    %li
+      %p
+      = post["content"]

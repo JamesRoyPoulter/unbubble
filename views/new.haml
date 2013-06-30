@@ -1,11 +1,15 @@
-Create a new post
+%h3 Create a new post
 
 #form
   %form{action:"/create", method: "post"}
+    %p
+    Post title
     %input{type: "text", name:"title"}
     %p
+      Body
       %input{type: "text", name:"content"}
     %p
+      Date
       %input{type: "text", name:"creation_date"}
     %p
-      %button publish post
+      %button Publish post

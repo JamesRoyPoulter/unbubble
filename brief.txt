@@ -9,30 +9,25 @@
 * the posts can only be created, edited and deleted in the admin part of the blocks
 
 
-
-
 to do:
 
-
-delete posts
-admin access with sessions
 can only be created edited or deleted in admin part
 
 
+home page
+- view blogs
+- clicking on blog
+-admin link
 
 
+blog view
+- view blog
+- admin link
 
+login to admin
 
-
-get '/admin' do
-  unless session[:admin] == true
-    redirect "/"
-end
-
-
-
-get '/admin_connect' do
-  if params["login"]== "geraud" and params["password"]=="wdi"
-    session[:admin] = true
-    redirect "/admin" #page not created yet...
-end
+admin
+- create posts
+- list of posts
+- delete button next to each
+- edit button next to year
